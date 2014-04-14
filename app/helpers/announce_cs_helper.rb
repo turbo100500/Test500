@@ -1,0 +1,2 @@
+module AnnounceCsHelper
+end

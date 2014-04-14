@@ -1,0 +1,81 @@
+<%= form_for(@announce_i) do |f| %>
+  <% if @announce_i.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@announce_i.errors.count, "error") %> prohibited this announce_i from being saved:</h2>
+
+      <ul>
+      <% @announce_i.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br />
+    <%= f.text_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :settlement %><br />
+    <%= f.text_field :settlement %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :floor_all %><br />
+    <%= f.text_field :floor_all %>
+  </div>
+  <div class="field">
+    <%= f.label :floor_num %><br />
+    <%= f.text_field :floor_num %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :fact_price %><br />
+    <%= f.text_field :fact_price %>
+  </div>
+  <div class="field">
+    <%= f.label :OB %><br />
+    <%= f.text_field :OB %>
+  </div>
+  <div class="field">
+    <%= f.label :Jil %><br />
+    <%= f.text_field :Jil %>
+  </div>
+  <div class="field">
+    <%= f.label :KU %><br />
+    <%= f.text_field :KU %>
+  </div>
+  <div class="field">
+    <%= f.label :action %><br />
+    <%= f.text_field :action %>
+  </div>
+  <div class="field">
+    <%= f.label :manager_id %><br />
+    <%= f.number_field :manager_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

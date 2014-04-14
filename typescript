@@ -1,0 +1,293 @@
+Скрипт запущен Пнд 14 Апр 2014 07:16:59
+root@localhost:/Rails_Projects/Test500# rails server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 07:19:31] INFO  WEBrick 1.3.1
+[2014-04-14 07:19:31] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 07:19:31] INFO  WEBrick::HTTPServer#start: pid=7196 port=3000
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 07:19:34 +0000
+Connecting to database specified by database.yml
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 126.2ms
+
+NoMethodError (undefined method `authenticate' for #<User:0x0000000284e750>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:15:34 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1
+Completed 500 Internal Server Error in 63.2ms
+
+NoMethodError (undefined method `authenticate' for #<User:0x0000000293c8b0>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:15:40 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 7.3ms
+
+NoMethodError (undefined method `authenticate' for #<User:0x000000029f5428>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.4ms)
+^C[2014-04-14 14:16:48] INFO  going to shutdown ...
+[2014-04-14 14:16:48] INFO  WEBrick::HTTPServer#start done.
+Exiting
+root@localhost:/Rails_Projects/Test500# rails server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 14:16:56] INFO  WEBrick 1.3.1
+[2014-04-14 14:16:56] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 14:16:56] INFO  WEBrick::HTTPServer#start: pid=7880 port=3000
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:17:03 +0000
+Connecting to database specified by database.yml
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 199.6ms
+
+NoMethodError (undefined method `authenticate' for #<User:0x00000002e74d50>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.1ms)
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 206.2ms (Views: 204.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /application.css - 304 Not Modified (135ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /announce_cs.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /announce_is.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /sessions.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /announce_cs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /announce_is.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /sessions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /users.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:18 +0000
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"sdfd", "pass"=>"qwe"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'sdfd' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37.2ms (Views: 30.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /announce_is.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /users.css - 304 Not Modified (80ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 14:17:23 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:17:37 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 5.4ms
+
+NoMethodError (undefined method `authenticate' for #<User:0x00000002f27f90>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+^C[2014-04-14 14:20:21] INFO  going to shutdown ...
+[2014-04-14 14:20:21] INFO  WEBrick::HTTPServer#start done.
+Exiting
+root@localhost:/Rails_Projects/Test500# giy[Kt
+bash: git: команда не найдена
+root@localhost:/Rails_Projects/Test500# apt-get install install libcurl4-gnutls- dev libexpat1-dev gettext
+Чтение списков пакетов... 0%Чтение списков пакетов... 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей... 0%Построение дерева зависимостей... 0%Построение дерева зависимостей... 50%Построение дерева зависимостей... 50%Построение дерева зависимостей       
+Чтение информации о состоянии... 0%Чтение информации о состоянии... 0%Чтение информации о состоянии… Готово
+E: Не удалось найти пакет install
+root@localhost:/Rails_Projects/Test500# apt-get install git-core
+Чтение списков пакетов... 0%Чтение списков пакетов... 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей... 0%Построение дерева зависимостей... 0%Построение дерева зависимостей... 50%Построение дерева зависимостей... 50%Построение дерева зависимостей       
+Чтение информации о состоянии... 0%Чтение информации о состоянии... 0%Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  git git-man liberror-perl
+Предлагаемые пакеты:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-arch git-cvs git-svn
+  git-email git-gui gitk gitweb
+НОВЫЕ пакеты, которые будут установлены:
+  git git-core git-man liberror-perl
+обновлено 0, установлено 4 новых пакетов, для удаления отмечено 0 пакетов, и 7 пакетов не обновлено.
+Необходимо скачать 7 782 kБ архивов.
+После данной операции, объём занятого дискового пространства возрастёт на 14,7 MB.
+Хотите продолжить [Д/н]? y
+0% [Обработка]                       Получено:1 http://ftp.de.debian.org/debian/ squeeze/main liberror-perl all 0.17-1 [23,6 kB]
+                       0% [1 liberror-perl 3 789 B/23,6 kB 16%] [Соединение с http.us.debi                                                                               0% [Ожидание заголовков]                                          Получено:2 http://http.us.debian.org/debian/ wheezy/main git-man all 1:1.7.10.4-1+wheezy1 [1 074 kB]
+                                          0% [2 git-man 5 527 B/1 074 kB 1%]                                    1% [2 git-man 85,2 kB/1 074 kB 8%]3% [2 git-man 231 kB/1 074 kB 22%]6% [2 git-man 469 kB/1 074 kB 44%]                                   13% [2 git-man 1 013 kB/1 074 kB 94%]                                       14% [Обработка]                        Получено:3 http://http.us.debian.org/debian/ wheezy/main git amd64 1:1.7.10.4-1+wheezy1 [6 683 kB]
+                        14% [3 git 1 146 B/6 683 kB 0%]                                 15% [3 git 85,1 kB/6 683 kB 1%]                                17% [3 git 200 kB/6 683 kB 3%]20% [3 git 457 kB/6 683 kB 7%]                               26% [3 git 931 kB/6 683 kB 14%]                                35% [3 git 1 640 kB/6 683 kB 25%]                                   47% [3 git 2 525 kB/6 683 kB 38%]                                592 kB/s 7с58% [3 git 3 402 kB/6 683 kB 51%]                                592 kB/s 5с69% [3 git 4 300 kB/6 683 kB 64%]                                592 kB/s 4с81% [3 git 5 188 kB/6 683 kB 78%]                                592 kB/s 2с92% [3 git 6 068 kB/6 683 kB 91%]                                592 kB/s 1с100% [Обработка]                                          592 kB/s 0с                                                                               Получено:4 http://http.us.debian.org/debian/ wheezy/main git-core all 1:1.7.10.4-1+wheezy1 [1 336 B]
+100% [4 git-core 1 336 B/1 336 B 100%]                           592 kB/s 0с100% [Обработка]                                          592 kB/s 0с                                                                               Получено 7 782 kБ за 8с (894 kБ/c)
+Выбор ранее не выбранного пакета liberror-perl.
+(Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 153462 файла и каталога.)
+Распаковывается пакет liberror-perl (из файла …/liberror-perl_0.17-1_all.deb) …
+Выбор ранее не выбранного пакета git-man.
+Распаковывается пакет git-man (из файла …/git-man_1%3a1.7.10.4-1+wheezy1_all.deb) …
+Выбор ранее не выбранного пакета git.
+Распаковывается пакет git (из файла …/git_1%3a1.7.10.4-1+wheezy1_amd64.deb) …
+Выбор ранее не выбранного пакета git-core.
+Распаковывается пакет git-core (из файла …/git-core_1%3a1.7.10.4-1+wheezy1_all.deb) …
+Обрабатываются триггеры для man-db …
+Настраивается пакет liberror-perl (0.17-1) …
+Настраивается пакет git-man (1:1.7.10.4-1+wheezy1) …
+Настраивается пакет git (1:1.7.10.4-1+wheezy1) …
+Настраивается пакет git-core (1:1.7.10.4-1+wheezy1) …
+root@localhost:/Rails_Projects/Test500# git
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help <command>' for more information on a specific command.
+root@localhost:/Rails_Projects/Test500# git config --global user.mail[K[K[K[Kname Turbo10050 0
+root@localhost:/Rails_Projects/Test500# git config --global user.name Turbo1005000[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[

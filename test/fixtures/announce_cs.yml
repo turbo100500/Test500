@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  square: 1.5
+  region: MyString
+  area: MyString
+  city: MyString
+  settlement: MyString
+  action: MyString
+  rent: 1.5
+  price: 1.5
+  owner: MyString
+  manager_id: 1
+
+two:
+  name: MyString
+  type: 
+  square: 1.5
+  region: MyString
+  area: MyString
+  city: MyString
+  settlement: MyString
+  action: MyString
+  rent: 1.5
+  price: 1.5
+  owner: MyString
+  manager_id: 1

@@ -1,0 +1,45 @@
+<h1>Listing announce_cs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Square</th>
+    <th>Region</th>
+    <th>Area</th>
+    <th>City</th>
+    <th>Settlement</th>
+    <th>Action</th>
+    <th>Rent</th>
+    <th>Price</th>
+    <th>Owner</th>
+    <th>Manager</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @announce_cs.each do |announce_c| %>
+  <tr>
+    <td><%= announce_c.name %></td>
+    <td><%= announce_c.type %></td>
+    <td><%= announce_c.square %></td>
+    <td><%= announce_c.region %></td>
+    <td><%= announce_c.area %></td>
+    <td><%= announce_c.city %></td>
+    <td><%= announce_c.settlement %></td>
+    <td><%= announce_c.action %></td>
+    <td><%= announce_c.rent %></td>
+    <td><%= announce_c.price %></td>
+    <td><%= announce_c.owner %></td>
+    <td><%= announce_c.manager_id %></td>
+    <td><%= link_to 'Show', announce_c %></td>
+    <td><%= link_to 'Edit', edit_announce_c_path(announce_c) %></td>
+    <td><%= link_to 'Destroy', announce_c, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Announce c', new_announce_c_path %>
