@@ -290,4 +290,365 @@ The most commonly used git commands are:
 
 See 'git help <command>' for more information on a specific command.
 root@localhost:/Rails_Projects/Test500# git config --global user.mail[K[K[K[Kname Turbo10050 0
-root@localhost:/Rails_Projects/Test500# git config --global user.name Turbo1005000[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
+root@localhost:/Rails_Projects/Test500# git config --global user.name Turbo1005000[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[Kemail superllou t@mail.ru
+root@localhost:/Rails_Projects/Test500# git init
+Initialized empty Git repository in /Rails_Projects/Test500/.git/
+root@localhost:/Rails_Projects/Test500# git add .
+root@localhost:/Rails_Projects/Test500# git commit -m "noe[K auth"
+[master (root-commit) b4acccf] no auth
+ 92 files changed, 2895 insertions(+)
+ create mode 100755 .gitignore
+ create mode 100755 Gemfile
+ create mode 100755 Gemfile.lock
+ create mode 100755 README.rdoc
+ create mode 100755 Rakefile
+ create mode 100755 app/assets/images/rails.png
+ create mode 100755 app/assets/javascripts/announce_cs.js.coffee
+ create mode 100755 app/assets/javascripts/announce_is.js.coffee
+ create mode 100755 app/assets/javascripts/application.js
+ create mode 100755 app/assets/javascripts/sessions.js.coffee
+ create mode 100755 app/assets/javascripts/users.js.coffee
+ create mode 100755 app/assets/stylesheets/announce_cs.css.scss
+ create mode 100755 app/assets/stylesheets/announce_is.css.scss
+ create mode 100755 app/assets/stylesheets/application.css
+ create mode 100755 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100755 app/assets/stylesheets/sessions.css.scss
+ create mode 100755 app/assets/stylesheets/users.css.scss
+ create mode 100755 app/controllers/announce_cs_controller.rb
+ create mode 100755 app/controllers/announce_is_controller.rb
+ create mode 100755 app/controllers/application_controller.rb
+ create mode 100755 app/controllers/sessions_controller.rb
+ create mode 100755 app/controllers/users_controller.rb
+ create mode 100755 app/helpers/announce_cs_helper.rb
+ create mode 100755 app/helpers/announce_is_helper.rb
+ create mode 100755 app/helpers/application_helper.rb
+ create mode 100755 app/helpers/sessions_helper.rb
+ create mode 100755 app/helpers/users_helper.rb
+ create mode 100755 app/mailers/.gitkeep
+ create mode 100755 app/models/.gitkeep
+ create mode 100755 app/models/announce_c.rb
+ create mode 100755 app/models/announce_i.rb
+ create mode 100755 app/models/user.rb
+ create mode 100755 app/views/announce_cs/_form.html.erb
+ create mode 100755 app/views/announce_cs/edit.html.erb
+ create mode 100755 app/views/announce_cs/index.html.erb
+ create mode 100755 app/views/announce_cs/new.html.erb
+ create mode 100755 app/views/announce_cs/show.html.erb
+ create mode 100755 app/views/announce_is/_form.html.erb
+ create mode 100755 app/views/announce_is/edit.html.erb
+ create mode 100755 app/views/announce_is/index.html.erb
+ create mode 100755 app/views/announce_is/new.html.erb
+ create mode 100755 app/views/announce_is/show.html.erb
+ create mode 100755 app/views/layouts/application.html.erb
+ create mode 100644 app/views/sessions/new.html.erb
+ create mode 100755 app/views/users/_form.html.erb
+ create mode 100755 app/views/users/edit.html.erb
+ create mode 100755 app/views/users/index.html.erb
+ create mode 100755 app/views/users/new.html.erb
+ create mode 100755 app/views/users/show.html.erb
+ create mode 100755 config.ru
+ create mode 100755 config/application.rb
+ create mode 100755 config/boot.rb
+ create mode 100755 config/database.yml
+ create mode 100755 config/environment.rb
+ create mode 100755 config/environments/development.rb
+ create mode 100755 config/environments/production.rb
+ create mode 100755 config/environments/test.rb
+ create mode 100755 config/initializers/backtrace_silencers.rb
+ create mode 100755 config/initializers/inflections.rb
+ create mode 100755 config/initializers/mime_types.rb
+ create mode 100755 config/initializers/secret_token.rb
+ create mode 100755 config/initializers/session_store.rb
+ create mode 100755 config/initializers/wrap_parameters.rb
+ create mode 100755 config/locales/en.yml
+ create mode 100755 config/routes.rb
+ create mode 100755 db/migrate/20140412121249_create_announce_is.rb
+ create mode 100755 db/migrate/20140412122020_create_announce_cs.rb
+ create mode 100755 db/migrate/20140412124848_create_users.rb
+ create mode 100755 db/schema.rb
+ create mode 100755 db/seeds.rb
+ create mode 100755 doc/README_FOR_APP
+ create mode 100755 lib/assets/.gitkeep
+ create mode 100755 lib/tasks/.gitkeep
+ create mode 100755 log/.gitkeep
+ create mode 100755 public/404.html
+ create mode 100755 public/422.html
+ create mode 100755 public/500.html
+ create mode 100755 public/favicon.ico
+ create mode 100755 public/index.html
+ create mode 100755 public/robots.txt
+ create mode 100755 script/rails
+ create mode 100755 test/fixtures/.gitkeep
+ create mode 100755 test/fixtures/announce_cs.yml
+ create mode 100755 test/fixtures/announce_is.yml
+ create mode 100755 test/fixtures/users.yml
+ create mode 100755 test/functional/.gitkeep
+ create mode 100755 test/functional/announce_cs_controller_test.rb
+ create mode 100755 test/functional/announce_is_controller_test.rb
+ create mode 100755 test/functional/sessions_controller_test.rb
+ create mode 100755 test/functional/users_controller_test.rb
+ create mode 100755 test/integration/.gitkeep
+ create mode 100755 test/performance/browsing_test.rb
+ create mode 100755 test/test_helper.rb
+ create mode 100755 test/unit/.gitkeep
+ create mode 100755 test/unit/announce_c_test.rb
+ create mode 100755 test/unit/announce_i_test.rb
+ create mode 100755 test/unit/helpers/announce_cs_helper_test.rb
+ create mode 100755 test/unit/helpers/announce_is_helper_test.rb
+ create mode 100755 test/unit/helpers/sessions_helper_test.rb
+ create mode 100755 test/unit/helpers/users_helper_test.rb
+ create mode 100755 test/unit/user_test.rb
+ create mode 100644 typescript
+ create mode 100755 vendor/assets/javascripts/.gitkeep
+ create mode 100755 vendor/assets/stylesheets/.gitkeep
+ create mode 100755 vendor/plugins/.gitkeep
+root@localhost:/Rails_Projects/Test500# git remote add i[Korigin https://github.com [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm /turbo100500/Test500.git
+root@localhost:/Rails_Projects/Test500# git push -u origin master
+Username for 'https://github.com': turbo100500
+Password for 'https://turbo100500@github.com': 
+Counting objects: 125, done.
+Delta compression using up to 2 threads.
+Compressing objects:   0% (1/112)   Compressing objects:   1% (2/112)   Compressing objects:   2% (3/112)   Compressing objects:   3% (4/112)   Compressing objects:   4% (5/112)   Compressing objects:   5% (6/112)   Compressing objects:   6% (7/112)   Compressing objects:   7% (8/112)   Compressing objects:   8% (9/112)   Compressing objects:   9% (11/112)   Compressing objects:  10% (12/112)   Compressing objects:  11% (13/112)   Compressing objects:  12% (14/112)   Compressing objects:  13% (15/112)   Compressing objects:  14% (16/112)   Compressing objects:  15% (17/112)   Compressing objects:  16% (18/112)   Compressing objects:  17% (20/112)   Compressing objects:  18% (21/112)   Compressing objects:  19% (22/112)   Compressing objects:  20% (23/112)   Compressing objects:  21% (24/112)   Compressing objects:  22% (25/112)   Compressing objects:  23% (26/112)   Compressing objects:  24% (27/112)   Compressing objects:  25% (28/112)   Compressing objects:  26% (30/112)   Compressing objects:  27% (31/112)   Compressing objects:  28% (32/112)   Compressing objects:  29% (33/112)   Compressing objects:  30% (34/112)   Compressing objects:  31% (35/112)   Compressing objects:  32% (36/112)   Compressing objects:  33% (37/112)   Compressing objects:  34% (39/112)   Compressing objects:  35% (40/112)   Compressing objects:  36% (41/112)   Compressing objects:  37% (42/112)   Compressing objects:  38% (43/112)   Compressing objects:  39% (44/112)   Compressing objects:  40% (45/112)   Compressing objects:  41% (46/112)   Compressing objects:  42% (48/112)   Compressing objects:  43% (49/112)   Compressing objects:  44% (50/112)   Compressing objects:  45% (51/112)   Compressing objects:  46% (52/112)   Compressing objects:  47% (53/112)   Compressing objects:  48% (54/112)   Compressing objects:  49% (55/112)   Compressing objects:  50% (56/112)   Compressing objects:  51% (58/112)   Compressing objects:  52% (59/112)   Compressing objects:  53% (60/112)   Compressing objects:  54% (61/112)   Compressing objects:  55% (62/112)   Compressing objects:  56% (63/112)   Compressing objects:  57% (64/112)   Compressing objects:  58% (65/112)   Compressing objects:  59% (67/112)   Compressing objects:  60% (68/112)   Compressing objects:  61% (69/112)   Compressing objects:  62% (70/112)   Compressing objects:  63% (71/112)   Compressing objects:  64% (72/112)   Compressing objects:  65% (73/112)   Compressing objects:  66% (74/112)   Compressing objects:  67% (76/112)   Compressing objects:  68% (77/112)   Compressing objects:  69% (78/112)   Compressing objects:  70% (79/112)   Compressing objects:  71% (80/112)   Compressing objects:  72% (81/112)   Compressing objects:  73% (82/112)   Compressing objects:  74% (83/112)   Compressing objects:  75% (84/112)   Compressing objects:  76% (86/112)   Compressing objects:  77% (87/112)   Compressing objects:  78% (88/112)   Compressing objects:  79% (89/112)   Compressing objects:  80% (90/112)   Compressing objects:  81% (91/112)   Compressing objects:  82% (92/112)   Compressing objects:  83% (93/112)   Compressing objects:  84% (95/112)   Compressing objects:  85% (96/112)   Compressing objects:  86% (97/112)   Compressing objects:  87% (98/112)   Compressing objects:  88% (99/112)   Compressing objects:  89% (100/112)   Compressing objects:  90% (101/112)   Compressing objects:  91% (102/112)   Compressing objects:  92% (104/112)   Compressing objects:  93% (105/112)   Compressing objects:  94% (106/112)   Compressing objects:  95% (107/112)   Compressing objects:  96% (108/112)   Compressing objects:  97% (109/112)   Compressing objects:  98% (110/112)   Compressing objects:  99% (111/112)   Compressing objects: 100% (112/112)   Compressing objects: 100% (112/112), done.
+Writing objects:   0% (1/125)   Writing objects:   1% (2/125)   Writing objects:   2% (3/125)   Writing objects:   3% (4/125)   Writing objects:   4% (5/125)   Writing objects:   5% (7/125)   Writing objects:   6% (8/125)   Writing objects:   7% (9/125)   Writing objects:   8% (10/125)   Writing objects:   9% (12/125)   Writing objects:  10% (13/125)   Writing objects:  11% (14/125)   Writing objects:  12% (15/125)   Writing objects:  13% (17/125)   Writing objects:  14% (18/125)   Writing objects:  15% (19/125)   Writing objects:  16% (20/125)   Writing objects:  17% (22/125)   Writing objects:  19% (24/125)   Writing objects:  20% (25/125)   Writing objects:  21% (27/125)   Writing objects:  22% (28/125)   Writing objects:  23% (29/125)   Writing objects:  24% (30/125)   Writing objects:  25% (32/125)   Writing objects:  26% (33/125)   Writing objects:  27% (34/125)   Writing objects:  28% (35/125)   Writing objects:  29% (37/125)   Writing objects:  30% (38/125)   Writing objects:  31% (39/125)   Writing objects:  32% (40/125)   Writing objects:  34% (43/125)   Writing objects:  36% (45/125)   Writing objects:  37% (47/125)   Writing objects:  38% (48/125)   Writing objects:  40% (50/125)   Writing objects:  41% (52/125)   Writing objects:  42% (53/125)   Writing objects:  43% (54/125)   Writing objects:  44% (55/125)   Writing objects:  45% (57/125)   Writing objects:  46% (58/125)   Writing objects:  47% (59/125)   Writing objects:  48% (60/125)   Writing objects:  49% (62/125)   Writing objects:  50% (63/125)   Writing objects:  51% (64/125)   Writing objects:  52% (65/125)   Writing objects:  53% (67/125)   Writing objects:  54% (68/125)   Writing objects:  55% (69/125)   Writing objects:  56% (70/125)   Writing objects:  57% (72/125)   Writing objects:  58% (73/125)   Writing objects:  59% (74/125)   Writing objects:  60% (75/125)   Writing objects:  61% (77/125)   Writing objects:  62% (78/125)   Writing objects:  63% (79/125)   Writing objects:  64% (80/125)   Writing objects:  65% (82/125)   Writing objects:  66% (83/125)   Writing objects:  67% (84/125)   Writing objects:  68% (85/125)   Writing objects:  69% (87/125)   Writing objects:  70% (88/125)   Writing objects:  71% (89/125)   Writing objects:  72% (90/125)   Writing objects:  73% (92/125)   Writing objects:  74% (93/125)   Writing objects:  75% (94/125)   Writing objects:  76% (95/125)   Writing objects:  77% (97/125)   Writing objects:  78% (98/125)   Writing objects:  79% (99/125)   Writing objects:  80% (100/125)   Writing objects:  81% (102/125)   Writing objects:  83% (104/125)   Writing objects:  84% (105/125)   Writing objects:  86% (108/125)   Writing objects:  87% (109/125)   Writing objects:  88% (110/125)   Writing objects:  89% (112/125)   Writing objects:  90% (113/125)   Writing objects:  91% (114/125)   Writing objects:  92% (116/125)   Writing objects:  93% (117/125)   Writing objects:  94% (118/125)   Writing objects:  95% (119/125)   Writing objects:  96% (120/125)   Writing objects:  97% (122/125)   Writing objects:  98% (123/125)   Writing objects:  99% (124/125)   Writing objects: 100% (125/125)   Writing objects: 100% (125/125), 41.46 KiB, done.
+Total 125 (delta 19), reused 0 (delta 0)
+To https://github.com/turbo100500/Test500.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+root@localhost:/Rails_Projects/Test500# rila[K[K[Kails server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 14:41:03] INFO  WEBrick 1.3.1
+[2014-04-14 14:41:03] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 14:41:03] INFO  WEBrick::HTTPServer#start: pid=10316 port=3000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Connecting to database specified by database.yml
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /announce_is.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /announce_cs.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /sessions.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /announce_cs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /announce_is.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /users.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:08 +0000
+Served asset /application.js - 304 Not Modified (126ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-04-14 14:41:15 +0000
+
+Gem::LoadError (bcrypt-ruby is not part of the bundle. Add it to Gemfile.):
+  app/models/user.rb:3:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 191.6ms (Views: 189.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /jquery.js - 304 Not Modified (28ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /announce_is.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 14:41:17 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:41:25 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+Completed 500 Internal Server Error in 9.4ms
+
+Gem::LoadError (bcrypt-ruby is not part of the bundle. Add it to Gemfile.):
+  app/models/user.rb:3:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.2ms)
+^C[2014-04-14 14:42:39] INFO  going to shutdown ...
+[2014-04-14 14:42:39] INFO  WEBrick::HTTPServer#start done.
+Exiting
+root@localhost:/Rails_Projects/Test500# bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Using rake 10.2.2
+Using i18n 0.6.9
+Using multi_json 1.9.2
+Using activesupport 3.2.17
+Using builder 3.0.4
+Using activemodel 3.2.17
+Using erubis 2.7.0
+Using journey 1.0.4
+Using rack 1.4.5
+Using rack-cache 1.2
+Using rack-test 0.6.2
+Using hike 1.2.3
+Using tilt 1.4.1
+Using sprockets 2.2.2
+Using actionpack 3.2.17
+Using mime-types 1.25.1
+Using polyglot 0.3.4
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 3.2.17
+Using arel 3.0.3
+Using tzinfo 0.3.39
+Using activerecord 3.2.17
+Using activeresource 3.2.17
+[32mInstalling bcrypt-ruby 3.0.1[0m
+Using bundler 1.6.1
+Using coffee-script-source 1.7.0
+Using execjs 2.0.2
+Using coffee-script 2.2.0
+Using rack-ssl 1.3.4
+Using json 1.8.1
+Using rdoc 3.12.2
+Using thor 0.19.1
+Using railties 3.2.17
+Using coffee-rails 3.2.2
+Using jquery-rails 3.1.0
+Using mysql2 0.3.15
+Using rails 3.2.17
+Using sass 3.3.4
+Using sass-rails 3.2.6
+Using uglifier 2.5.0
+[32mYour bundle is complete![0m
+[32mUse `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@localhost:/Rails_Projects/Test500# bundle install[2Prails server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 14:43:41] INFO  WEBrick 1.3.1
+[2014-04-14 14:43:41] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 14:43:41] INFO  WEBrick::HTTPServer#start: pid=10380 port=3000
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:43:46 +0000
+Connecting to database specified by database.yml
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 231.2ms
+
+NameError (undefined local variable or method `password_digest' for #<User:0x00000003664718>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:47:21 +0000
+
+ActionController::RoutingError (undefined local variable or method `has_secure_password' for SessionsController:Class):
+  app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:47:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1
+Completed 500 Internal Server Error in 153.
