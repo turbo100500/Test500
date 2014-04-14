@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include ActiveModel::SecurePassword
   has_secure_password
-  attr_accessible :email, :name, :pass, :pass_con
+  attr_accessible :email, :name, :password, :password_confirmation
   
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates :email, presence:   true,
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  validates :pass, presence: true, length: { minimum: 6 }
-  validates :pass_con, presence: true
+  validates :password, presence: true, length: { minimum: 6 }
+  validates :password_confirmation, presence: true
 
 end

@@ -651,4 +651,1439 @@ Started POST "/sessions" for 127.0.0.1 at 2014-04-14 14:47:31 +0000
 Processing by SessionsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
   [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1
-Completed 500 Internal Server Error in 153.
+Completed 500 Internal Server Error in 153.3ms
+
+NameError (undefined local variable or method `password_digest' for #<User:0x000000045a4a48>):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.1ms)
+^C[2014-04-14 14:49:01] INFO  going to shutdown ...
+[2014-04-14 14:49:01] INFO  WEBrick::HTTPServer#start done.
+Exiting
+root@localhost:/Rails_Projects/Test500# git -h
+Unknown option: -h
+usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [-c name=value] [--help]
+           <command> [<args>]
+root@localhost:/Rails_Projects/Test500# gir[Kt commit -a -m "undefined gedi[K[K[K[Kpassword_dig est"
+[master 4349e19] undefined password_digest
+ 5 files changed, 366 insertions(+), 2 deletions(-)
+root@localhost:/Rails_Projects/Test500# git push
+Username for 'https://github.com': turbo100500
+Password for 'https://turbo100500@github.com': 
+Counting objects: 19, done.
+Delta compression using up to 2 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 8.15 KiB, done.
+Total 10 (delta 8), reused 0 (delta 0)
+To https://github.com/turbo100500/Test500.git
+   b4acccf..4349e19  master -> master
+root@localhost:/Rails_Projects/Test500# rails g migration add_pass_[K_g[Kdigest[K[K[K[K[K[K[Kword_digest_to _users password_digest
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20140414150335_add_password_digest_to_users.rb
+root@localhost:/Rails_Projects/Test500# rake db:migrate
+==  AddPasswordDigestToUsers: migrating =======================================
+-- add_column(:users, :password_digest, :string)
+   -> 0.5062s
+==  AddPasswordDigestToUsers: migrated (0.5066s) ==============================
+
+root@localhost:/Rails_Projects/Test500# rails server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 15:06:48] INFO  WEBrick 1.3.1
+[2014-04-14 15:06:48] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 15:06:48] INFO  WEBrick::HTTPServer#start: pid=10453 port=3000
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-14 15:06:52 +0000
+Connecting to database specified by database.yml
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "session"=>{"email"=>"superllout@mail.ru", "pass"=>"qwerty"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superllout@mail.ru' LIMIT 1[0m
+Completed 500 Internal Server Error in 234.3ms
+
+BCrypt::Errors::InvalidHash (invalid hash):
+  app/controllers/sessions_controller.rb:10:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 104.4ms (Views: 96.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /announce_cs.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /announce_is.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /sessions.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /announce_cs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /announce_is.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:41 +0000
+Served asset /application.js - 304 Not Modified (29ms)
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 134.4ms (Views: 130.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:43 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:44 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:07:44 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:08:22 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Smirnov", "email"=>"monro@mail.ru", "pass"=>"123toto"}, "commit"=>"Create my account"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 52.5ms
+
+NoMethodError (undefined method `pass_con' for #<User:0x00000003dc38b0>):
+  app/controllers/users_controller.rb:46:in `block in create'
+  app/controllers/users_controller.rb:45:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (85.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (112.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:10:54 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Smirnov", "email"=>"monro@mail.ru", "pass"=>"123toto"}, "commit"=>"Create my account"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 75.4ms
+
+NoMethodError (undefined method `pass_con' for #<User:0x00000003ce3350>):
+  app/controllers/users_controller.rb:46:in `block in create'
+  app/controllers/users_controller.rb:45:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 48.7ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /announce_cs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:10:59 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:11:00 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:11:00 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:11:00 +0000
+Served asset /application.js - 304 Not Modified (89ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:11:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123", "pass_con"=>"123"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 3.1ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: pass_con):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:12:17 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123", "pass_con"=>"123"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 2.3ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: pass_con):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:12:20 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123", "pass_con"=>"123"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 2.5ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: pass_con):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 41.7ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:14:18 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 92.1ms (Views: 49.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:16:52 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:17:16 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 3.6ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: password_confirmation):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 116.0ms (Views: 45.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /announce_cs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:31 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:17:36 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 44.0ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:36 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:36 +0000
+Served asset /application.css - 304 Not Modified (91ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:36 +0000
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /announce_is.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /jquery.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /announce_cs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:37 +0000
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"123toto", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 49.2ms (Views: 33.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /sessions.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:56 +0000
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:17:57 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:18:23 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "pass"=>"qwerty", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 44.4ms (Views: 31.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:23 +0000
+Served asset /application.css - 304 Not Modified (97ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:18:24 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+^C[2014-04-14 15:20:58] INFO  going to shutdown ...
+[2014-04-14 15:20:58] INFO  WEBrick::HTTPServer#start done.
+Exiting
+root@localhost:/Rails_Projects/Test500# rails serverke db:migrate
+root@localhost:/Rails_Projects/Test500# rake db:migrate[3Pils server
+=> Booting WEBrick
+=> Rails 3.2.17 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2014-04-14 15:22:48] INFO  WEBrick 1.3.1
+[2014-04-14 15:22:48] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2014-04-14 15:22:48] INFO  WEBrick::HTTPServer#start: pid=10555 port=3000
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-14 15:22:50 +0000
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 198.3ms
+
+ActionView::Template::Error (undefined method `pass' for #<User:0x000000039143a0>):
+    14:   <tr>
+    15:     <td><%= user.name %></td>
+    16:     <td><%= user.email %></td>
+    17:     <td><%= user.pass %></td>
+    18:     <td><%= link_to 'Show', user %></td>
+    19:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    20:     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/users/index.html.erb:17:in `block in _app_views_users_index_html_erb___2908774116059410069_13345560'
+  app/views/users/index.html.erb:13:in `each'
+  app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___2908774116059410069_13345560'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 107.5ms (Views: 102.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /application.css - 304 Not Modified (142ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /announce_cs.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /announce_is.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /sessions.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /announce_cs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /announce_is.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:14 +0000
+Served asset /application.js - 304 Not Modified (33ms)
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:23:16 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (97.4ms)
+Completed 200 OK in 125.5ms (Views: 122.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:23:17 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:23:27 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro@mail.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro@mail.ru' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password`, `password_digest`, `updated_at`) VALUES ('2014-04-14 15:23:27', 'monro@mail.ru', 'Monro', NULL, '$2a$10$oRACZgc0I0bTUWLTW7ogp.MvL5N96TuheFcdP75SZSrqlb6uuQrXm', '2014-04-14 15:23:27')[0m
+  [1m[35m (78.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 320.3ms (ActiveRecord: 80.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2014-04-14 15:23:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 18.4ms
+
+ActionView::Template::Error (undefined method `pass' for #<User:0x000000039736e8>):
+    20: 
+    21: <p>
+    22:   <b>Pass:</b>
+    23:   <%= @user.pass %>
+    24: </p>
+    25: 
+    26: 
+  app/views/users/show.html.erb:23:in `_app_views_users_show_html_erb__1256681331002171962_30115660'
+  app/controllers/users_controller.rb:18:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p451/gems/actionpack-3.2.17/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (111.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 34.6ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:24:07 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 185.9ms (Views: 137.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:21 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-14 15:27:35 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90Ba+VPtXZQzQbN4zBxkIr04O7xk6zT7h3JQB2hsoDQ=", "user"=>{"name"=>"Monro", "email"=>"monro2@mail.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'monro2@mail.ru' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password`, `password_digest`, `updated_at`) VALUES ('2014-04-14 15:27:35', 'monro2@mail.ru', 'Monro', NULL, '$2a$10$vilsaKkgVh5C3sv2D1Agq.cI4tJ/slcnBNMFS0Pd/dXcyttHapkQ2', '2014-04-14 15:27:35')[0m
+  [1m[35m (84.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 281.3ms (ActiveRecord: 86.3ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2014-04-14 15:27:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35.4ms (Views: 28.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /announce_is.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /jquery.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:36 +0000
+Served asset /application.js - 304 Not Modified (96ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:27:41 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 47.4ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /announce_is.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /sessions.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /announce_is.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:27:42 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-14 15:27:43 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 48.3ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 34.4ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /announce_cs.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /sessions.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:15 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 47.0ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /announce_is.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:28:58 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 41.5ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /announce_cs.css - 304 Not Modified (84ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /users.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:11 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-04-14 15:29:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31.7ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /sessions.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /announce_is.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:15 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-04-14 15:29:16 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30.9ms (Views: 26.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/announce_cs.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /announce_cs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /application.css - 304 Not Modified (100ms)
+
+
+Started GET "/assets/announce_is.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /announce_is.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/announce_cs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /announce_cs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/announce_is.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /announce_is.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-14 15:29:17 +0000
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" f
